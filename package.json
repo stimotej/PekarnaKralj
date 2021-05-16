@@ -23,6 +23,7 @@
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-image": "^1.4.0",
     "gatsby-plugin-material-ui": "^3.0.1",
+    "gatsby-plugin-react-helmet": "^4.5.0",
     "gatsby-plugin-remote-images": "^2.4.0",
     "gatsby-plugin-sharp": "^3.4.0",
     "gatsby-plugin-webfonts": "^2.1.0",
@@ -32,6 +33,7 @@
     "gbimage-bridge": "^0.1.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-markdown": "^6.0.2"
   },

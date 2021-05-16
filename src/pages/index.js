@@ -5,18 +5,22 @@ import Hero from "../components/Hero"
 import Cards from "../components/Cards"
 import AboutCard from "../components/AboutCard"
 import Comments from "../components/Comments"
+import SEO from "../components/Seo"
 
 const Index = ({ data }) => {
   const {
     allStrapiCards: { nodes: cards },
   } = data
   return (
-    <Layout>
-      <Hero />
-      <Cards cards={cards} />
-      <AboutCard />
-      <Comments />
-    </Layout>
+    <>
+      <SEO title="Početna" />
+      <Layout>
+        <Hero />
+        <Cards cards={cards} />
+        <AboutCard />
+        <Comments />
+      </Layout>
+    </>
   )
 }
 

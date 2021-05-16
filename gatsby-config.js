@@ -1,9 +1,17 @@
 module.exports = {
+  siteMetadata: {
+    title: `Pekarna Kralj`,
+    description: `Kraljevski kolači i pekarski proizvodi pekarne Kralj`,
+    titleTemplate: `%s | Pekarna Kralj`,
+    url: `https://pekarnakralj.netlify.app`,
+    image: `/mainImg.png`,
+  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

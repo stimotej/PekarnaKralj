@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Gallery from "../components/Gallery"
+import SEO from "../components/Seo"
 
 const categoryList = [
   { name: "Sve", value: "" },
@@ -18,15 +19,18 @@ const torte = ({ data }) => {
   const { title, description, backgroundImage, images } = nodes[0]
 
   return (
-    <Layout>
-      <Gallery
-        title={title}
-        description={description}
-        backgroundImage={backgroundImage}
-        images={images}
-        categoryList={categoryList}
-      />
-    </Layout>
+    <>
+      <SEO title="Torte" />
+      <Layout>
+        <Gallery
+          title={title}
+          description={description}
+          backgroundImage={backgroundImage}
+          images={images}
+          categoryList={categoryList}
+        />
+      </Layout>
+    </>
   )
 }
 
