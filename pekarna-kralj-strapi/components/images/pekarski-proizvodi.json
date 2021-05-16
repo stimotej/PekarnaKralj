@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_images_pekarski_proizvodis",
+  "info": {
+    "name": "pekarskiProizvodi",
+    "icon": "leaf",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

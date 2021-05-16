@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pekarski-proizvodi",
+      "handler": "pekarski-proizvodi.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pekarski-proizvodi",
+      "handler": "pekarski-proizvodi.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pekarski-proizvodi",
+      "handler": "pekarski-proizvodi.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
