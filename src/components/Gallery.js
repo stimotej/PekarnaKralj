@@ -76,21 +76,12 @@ const Gallery = ({
                 {(img.category === categorySelected ||
                   categorySelected === "") && (
                   <Grid item xs={12} sm={6} lg={4}>
-                    <div
+                    <GatsbyImage
+                      image={getImage(img.image)}
+                      className="about-images"
                       onClick={() => handleImageModal(img)}
-                      onKeyDown={() => handleImageModal(img)}
-                      role="button"
-                      tabIndex="0"
-                    >
-                      <GatsbyImage
-                        image={getImage(img.image)}
-                        className="about-images"
-                        style={{
-                          gridArea: "1/1",
-                        }}
-                        layout="fullWidth"
-                      />
-                    </div>
+                      layout="fullWidth"
+                    />
                   </Grid>
                 )}
               </>

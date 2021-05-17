@@ -47,21 +47,15 @@ const About = ({
             {images.map((img, index) => {
               return (
                 <Grid item xs={12} sm={6} lg={4} key={index}>
-                  <div
+                  <GatsbyImage
+                    image={getImage(img.localFile)}
+                    className="about-images"
+                    style={{
+                      gridArea: "1/1",
+                    }}
                     onClick={() => handleImageModal(img)}
-                    onKeyDown={() => handleImageModal(img)}
-                    role="button"
-                    tabIndex="0"
-                  >
-                    <GatsbyImage
-                      image={getImage(img.localFile)}
-                      className="about-images"
-                      style={{
-                        gridArea: "1/1",
-                      }}
-                      layout="fullWidth"
-                    />
-                  </div>
+                    layout="fullWidth"
+                  />
                 </Grid>
               )
             })}

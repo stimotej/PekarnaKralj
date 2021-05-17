@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import logo from "../assets/logo.svg"
 import { AppBar, Box, Grid, IconButton, Toolbar } from "@material-ui/core"
@@ -9,8 +9,11 @@ const NavbarComponent = () => {
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
-    document.body.style.overflow = showNavbar ? "auto" : "hidden"
   }
+
+  useEffect(() => {
+    document.body.style.overflow = showNavbar ? "hidden" : "auto"
+  })
 
   return (
     <>

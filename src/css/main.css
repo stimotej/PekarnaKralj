@@ -128,9 +128,9 @@
 }
 
 .about-images {
-  width: 100%;
+  grid-area: "1/1";
   height: 50vh;
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .comment-card {
@@ -215,9 +215,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  grid-area: "1/1";
   width: 90vw;
   max-height: 90vh;
-  height: auto;
   border-radius: 10px;
 }
 
@@ -260,8 +260,8 @@
   }
 
   .modal-image {
-    width: 90vh;
-    height: auto;
+    height: 90vw;
+    max-width: 90vh;
   }
 
   .card-text {

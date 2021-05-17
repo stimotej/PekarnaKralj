@@ -27,8 +27,6 @@ const kontakt = () => {
                 netlify-honeypot="bot-field"
                 data-netlify="true"
                 name="contact"
-                noValidate
-                autoComplete="off"
               >
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
