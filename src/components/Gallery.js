@@ -42,10 +42,14 @@ const Gallery = ({
       />
       <Grid container className="about-content padding">
         <Grid item>
-          <Typography variant="h4">{title}</Typography>
+          <Typography variant="h4" component="h2">
+            {title}
+          </Typography>
 
           <Box paddingY={4}>
-            <Typography variant="body1">{description}</Typography>
+            <Typography variant="body1" component="p">
+              {description}
+            </Typography>
           </Box>
 
           {categoryList && (
@@ -80,7 +84,9 @@ const Gallery = ({
                       image={getImage(img.image)}
                       className="about-images"
                       onClick={() => handleImageModal(img)}
+                      aria-label="Otvori pregled slike"
                       layout="fullWidth"
+                      imgStyle={{ borderRadius: "1rem" }}
                     />
                   </Grid>
                 )}

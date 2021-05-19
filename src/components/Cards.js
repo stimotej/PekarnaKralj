@@ -5,7 +5,7 @@ import Card from "./Card"
 const Cards = ({ cards }) => {
   return (
     <section>
-      <Grid container alignItems="center" maxWidth="sm">
+      <Grid container alignItems="center">
         {cards.map((card, index) => {
           return (
             <div key={card.id}>

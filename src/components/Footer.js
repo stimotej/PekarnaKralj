@@ -1,4 +1,5 @@
 import { Box, Grid } from "@material-ui/core"
+import { Link } from "gatsby"
 import React from "react"
 import logo from "../assets/logo.svg"
 
@@ -7,7 +8,9 @@ const Footer = () => {
     <Grid container className="footer" justify="center">
       <Grid item>
         <Box marginY={2}>
-          <img src={logo} alt="logo" className="logo" />
+          <Link to="/" aria-label="Idi na početnu stranicu">
+            <img src={logo} alt="logo" className="logo" />
+          </Link>
         </Box>
       </Grid>
     </Grid>

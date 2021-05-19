@@ -17,29 +17,50 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <AppBar position="absolute" color="transparent" elevation="0">
+      <AppBar position="absolute" color="transparent" elevation={0}>
         <Toolbar className="navbar">
-          <Link to="/torte" className="nav-link nav-hide">
+          <Link
+            to="/torte"
+            className="nav-link nav-hide"
+            aria-label="Idi na torte"
+          >
             Torte
           </Link>
-          <Link to="/kolaci" className="nav-link nav-hide">
+          <Link
+            to="/kolaci"
+            className="nav-link nav-hide"
+            aria-label="Idi na kolače"
+          >
             Kolači
           </Link>
-          <Link to="/pekarski-proizvodi" className="nav-link nav-hide">
+          <Link
+            to="/pekarski-proizvodi"
+            className="nav-link nav-hide"
+            aria-label="Idi na pekarske proizvode"
+          >
             Pekarski proizvodi
           </Link>
-          <Link to="/">
+          <Link to="/" aria-label="Idi na početnu stranicu">
             <img src={logo} alt="logo" className="logo" />
           </Link>
-          <Link to="/o-nama" className="nav-link nav-hide">
+          <Link
+            to="/o-nama"
+            className="nav-link nav-hide"
+            aria-label="Idi na stranicu o nama"
+          >
             O nama
           </Link>
-          <Link to="/kontakt" className="nav-link nav-hide">
+          <Link
+            to="/kontakt"
+            className="nav-link nav-hide"
+            aria-label="Idi na kontakt stranicu"
+          >
             Kontakt
           </Link>
           <IconButton
             aria-label="menu"
             className="menu-btn"
+            aria-label="Otvori izbornik za navigaciju"
             onClick={handleShowNavbar}
           >
             {showNavbar ? (
@@ -59,19 +80,31 @@ const NavbarComponent = () => {
             justify="center"
             alignContent="center"
           >
-            <Link to="/torte" className="nav-link">
+            <Link to="/torte" className="nav-link" aria-label="Idi na torte">
               Torte
             </Link>
-            <Link to="/kolaci" className="nav-link">
+            <Link to="/kolaci" className="nav-link" aria-label="Idi na kolače">
               Kolači
             </Link>
-            <Link to="/pekarski-proizvodi" className="nav-link">
+            <Link
+              to="/pekarski-proizvodi"
+              className="nav-link"
+              aria-label="Idi na pekarske proizvode"
+            >
               Pekarski proizvodi
             </Link>
-            <Link to="/o-nama" className="nav-link">
+            <Link
+              to="/o-nama"
+              className="nav-link"
+              aria-label="Idi na stranicu o nama"
+            >
               O nama
             </Link>
-            <Link to="/kontakt" className="nav-link">
+            <Link
+              to="/kontakt"
+              className="nav-link"
+              aria-label="Idi na kontakt stranicu"
+            >
               Kontakt
             </Link>
           </Grid>

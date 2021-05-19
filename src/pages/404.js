@@ -4,12 +4,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import { BsArrowRight } from "react-icons/bs"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const Error = () => {
   return (
     <>
-      <SEO title="404" />
+      <Seo title="404" />
       <Layout>
         <StaticImage
           src="../assets/pekarna-kralj-404.jpg"
@@ -24,7 +24,12 @@ const Error = () => {
           <Grid item direction="column" className="text-center">
             <Typography variant="h4">Stranica nije pronađena</Typography>
             <Box marginTop={6}>
-              <Link to="/" className="card-link">
+              <Link
+                to="/"
+                className="card-link"
+                aria-label="Idi na početnu stranicu"
+                style={{ justifyContent: "center" }}
+              >
                 <Typography variant="button">Vrati se na početnu</Typography>
                 <BsArrowRight size={22} className="card-link-icon" />
               </Link>

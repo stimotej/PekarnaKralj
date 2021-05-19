@@ -12,11 +12,15 @@ const ImageModal = props => {
       aria-labelledby="image-modal"
     >
       <>
-        <div className="modal-image-container">
-          <GatsbyImage className="modal-image" image={props.imageState} />
-        </div>
+        <GatsbyImage
+          className="modal-image"
+          image={props.imageState}
+          imgStyle={{ borderRadius: "1rem" }}
+          imgClassName="modal-image-img"
+        />
         <IconButton
           className="modal-image-close-btn"
+          aria-label="Zatvori pregled slike"
           onClick={props.handleClose}
         >
           <FiX size={28} color="white" />

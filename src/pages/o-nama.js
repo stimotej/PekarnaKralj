@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown"
 import Layout from "../components/Layout"
 import { Box, Grid, Typography } from "@material-ui/core"
 import ImageModal from "../components/ImageModal"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const About = ({
   data: {
@@ -23,7 +23,7 @@ const About = ({
 
   return (
     <>
-      <SEO title="O nama" />
+      <Seo title="O nama" />
       <Layout>
         <GatsbyImage
           image={gatsbyImage}
@@ -35,9 +35,11 @@ const About = ({
         />
         <Grid container className="about-content padding" fluid>
           <Grid item>
-            <Typography variant="h4">{title}</Typography>
+            <Typography variant="h4" component="h2">
+              {title}
+            </Typography>
             <Box paddingY={4}>
-              <Typography variant="body1">
+              <Typography variant="body1" component="p">
                 <ReactMarkdown children={text} />
               </Typography>
             </Box>
@@ -50,10 +52,9 @@ const About = ({
                   <GatsbyImage
                     image={getImage(img.localFile)}
                     className="about-images"
-                    style={{
-                      gridArea: "1/1",
-                    }}
+                    imgStyle={{ borderRadius: "1rem" }}
                     onClick={() => handleImageModal(img)}
+                    aria-label="Otvori pregled slike"
                     layout="fullWidth"
                   />
                 </Grid>
@@ -68,13 +69,17 @@ const About = ({
           <Grid item container direction="column">
             <Grid item>
               <Box marginTop={8} marginBottom={4}>
-                <Typography variant="h5">Kontakt informacije</Typography>
+                <Typography variant="h5" component="h3">
+                  Kontakt informacije
+                </Typography>
               </Box>
             </Grid>
             <Grid item container direction="row">
               <Grid item sm={12} md={4}>
                 <Box marginY={1}>
-                  <Typography variant="h6">Telefon</Typography>
+                  <Typography variant="h6" component="h4">
+                    Telefon
+                  </Typography>
                 </Box>
                 <Box marginY={1}>01/2061 146 (ured)</Box>
                 <Box marginY={1}>098/242 672 (Anica Kralj)</Box>
@@ -82,14 +87,18 @@ const About = ({
               </Grid>
               <Grid item sm={12} md={4}>
                 <Box marginY={1}>
-                  <Typography variant="h6">Email</Typography>
+                  <Typography variant="h6" component="h4">
+                    Email
+                  </Typography>
                 </Box>
                 <Box marginY={1}>info@pekarnakralj.hr</Box>
                 <Box marginY={1}>karlo.kralj@zg.t-com.hr</Box>
               </Grid>
               <Grid item sm={12} md={4}>
                 <Box marginY={1}>
-                  <Typography variant="h6">Adresa</Typography>
+                  <Typography variant="h6" component="h4">
+                    Adresa
+                  </Typography>
                 </Box>
                 <Box marginY={1}>
                   Trg Ante Starčevića 5, 10380 Sveti Ivan Zelina

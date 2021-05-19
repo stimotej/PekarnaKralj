@@ -45,5 +45,17 @@ module.exports = {
         singleTypes: [`about`, `torte`, `kolaci`, `pekarski-proizvodi`],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `PekarnaKralj`,
+        short_name: `PekarnaKralj`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#f48221`,
+        display: `standalone`,
+        icon: `src/assets/favicon.png`,
+      },
+    },
   ],
 }

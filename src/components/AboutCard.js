@@ -29,15 +29,26 @@ const AboutCard = () => {
 
   return (
     <Box component="article" marginTop={5} className="padding">
-      <Grid direction="row" xs={12} lg={6}>
-        <GatsbyImage image={gatsbyImage} className="card-image" />
+      <Grid item xs={12} md={6}>
+        <GatsbyImage
+          image={gatsbyImage}
+          alt={`Slika - O nama`}
+          className="card-image"
+          imgStyle={{ borderRadius: "1rem" }}
+        />
       </Grid>
-      <Grid direction="row" justify="flex-end" container>
-        <Grid direction="col" xs={12} lg={8}>
-          <Box component="p" marginTop={4} marginBottom={3}>
-            <Typography variant="body1">{description}</Typography>
+      <Grid container justify="flex-end">
+        <Grid item xs={12} md={8}>
+          <Box marginTop={4} marginBottom={3}>
+            <Typography variant="body1" component="p">
+              {description}
+            </Typography>
           </Box>
-          <Link to="/o-nama" className="card-link">
+          <Link
+            to="/o-nama"
+            className="card-link"
+            aria-label="Idi na stranicu o nama"
+          >
             <Typography variant="button">
               Više o povijesti obitelji kralj
             </Typography>

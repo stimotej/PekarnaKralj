@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Gallery from "../components/Gallery"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const categoryList = [
   { name: "Sve", value: "" },
@@ -20,7 +20,7 @@ const torte = ({ data }) => {
 
   return (
     <>
-      <SEO title="Torte" />
+      <Seo title="Torte" />
       <Layout>
         <Gallery
           title={title}

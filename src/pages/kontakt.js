@@ -2,12 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { Box, Button, Grid, TextField, Typography } from "@material-ui/core"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const kontakt = () => {
   return (
     <>
-      <SEO title="Kontakt" />
+      <Seo title="Kontakt" />
       <Layout>
         <StaticImage
           src="../assets/pekarna-kralj-kontakt.jpg"
@@ -20,7 +20,9 @@ const kontakt = () => {
         />
         <Grid container className="about-content" fluid justify="center">
           <div className="contact-card">
-            <Typography variant="h4">Kontakt</Typography>
+            <Typography variant="h4" component="h2">
+              Kontakt
+            </Typography>
             <Box marginY={4}>
               <form
                 method="post"
@@ -67,6 +69,7 @@ const kontakt = () => {
                 <Box marginTop={6}>
                   <Button
                     className="submit-btn"
+                    aria-label="Pošalji"
                     variant="contained"
                     type="submit"
                   >

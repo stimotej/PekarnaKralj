@@ -16,11 +16,17 @@ const Card = ({ title, description, slug, image, reverse }) => {
     >
       <Box clone order={2}>
         <Grid item xs={12} md={6} className="card-content card-text">
-          <Typography variant="h4">{title}</Typography>
+          <Typography variant="h4" component="h2">
+            {title}
+          </Typography>
           <Typography variant="body1" className="card-desc">
             {description}
           </Typography>
-          <Link to={`/${slug}`} className="card-link">
+          <Link
+            to={`/${slug}`}
+            className="card-link"
+            aria-label={`Idi na ${title}`}
+          >
             <Typography variant="button">Idi na {title}</Typography>
             <BsArrowRight size={22} className="card-link-icon" />
           </Link>
@@ -28,7 +34,12 @@ const Card = ({ title, description, slug, image, reverse }) => {
       </Box>
       <Box clone order={1}>
         <Grid item xs={12} md={6} className="card-media">
-          <GatsbyImage image={gatsbyImage} className="card-image" />
+          <GatsbyImage
+            image={gatsbyImage}
+            alt={`Slika - ${title}`}
+            className="card-image"
+            imgStyle={{ borderRadius: "1rem" }}
+          />
         </Grid>
       </Box>
     </Grid>

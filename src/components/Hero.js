@@ -27,9 +27,15 @@ const Hero = () => {
         }}
       >
         <Grid item className="title">
-          <Typography variant="h1">Pekarna Kralj</Typography>
-          <h3>Kraljevski dobri kolači</h3>
-          <Link to="/kontakt" className="contact-btn">
+          <Typography variant="h1" component="h1">
+            Pekarna Kralj
+          </Typography>
+          <Typography component="h3">Kraljevski dobri kolači</Typography>
+          <Link
+            to="/kontakt"
+            className="contact-btn"
+            aria-label="Idi na kontakt"
+          >
             Kontakt
           </Link>
         </Grid>

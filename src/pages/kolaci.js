@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Gallery from "../components/Gallery"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const kolaci = ({ data }) => {
   const {
@@ -13,7 +13,7 @@ const kolaci = ({ data }) => {
 
   return (
     <>
-      <SEO title="Kolači" />
+      <Seo title="Kolači" />
       <Layout>
         <Gallery
           title={title}

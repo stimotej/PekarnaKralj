@@ -5,7 +5,7 @@ import Hero from "../components/Hero"
 import Cards from "../components/Cards"
 import AboutCard from "../components/AboutCard"
 import Comments from "../components/Comments"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 const Index = ({ data }) => {
   const {
@@ -13,7 +13,7 @@ const Index = ({ data }) => {
   } = data
   return (
     <>
-      <SEO title="Početna" />
+      <Seo title="Početna" />
       <Layout>
         <Hero />
         <Cards cards={cards} />

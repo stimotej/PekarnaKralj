@@ -26,17 +26,19 @@ const Comments = () => {
   return (
     <Box component="article" marginY={10}>
       <Grid container>
-        <Grid xs={12} className="text-center">
-          <Box component="h5" marginBottom={5}>
-            <Typography variant="h5">Riječi naših klijenata</Typography>
+        <Grid item xs={12} className="text-center">
+          <Box marginBottom={5}>
+            <Typography variant="h5" component="h3">
+              Riječi naših klijenata
+            </Typography>
           </Box>
         </Grid>
-        <Grid item direction="row" container alignItems="center">
+        <Grid container direction="row" alignItems="center">
           <Box clone order={{ xs: 2, sm: 1 }} marginTop={{ xs: 3, sm: 0 }}>
-            <Grid item direction="column" xs={6} sm={2} className="text-center">
+            <Grid item xs={6} sm={2} className="text-center">
               <IconButton
                 className="comment-btn"
-                alignItems="center"
+                aria-label="Pogledaj prethodni komentar"
                 onClick={() =>
                   setActive(active > 0 ? active - 1 : totalCount - 1)
                 }
@@ -46,25 +48,29 @@ const Comments = () => {
             </Grid>
           </Box>
           <Box clone order={{ xs: 1, sm: 2 }} paddingX={3}>
-            <Grid
-              item
-              direction="column"
-              xs={12}
-              sm={8}
-              className="text-center"
-            >
-              <Box component="article" paddingY={5} className="comment-card">
-                <Box component="h3" marginBottom={3}>
-                  {comments[active].name}
+            <Grid item xs={12} sm={8} className="text-center">
+              <Box
+                component="article"
+                paddingY={5}
+                paddingX={3}
+                className="comment-card"
+              >
+                <Box marginBottom={3}>
+                  <Typography variant="h6" component="h4">
+                    {comments[active].name}
+                  </Typography>
                 </Box>
-                <p>"{comments[active].comment}"</p>
+                <Typography variant="body1" component="p">
+                  "{comments[active].comment}"
+                </Typography>
               </Box>
             </Grid>
           </Box>
           <Box clone order={{ xs: 3, sm: 3 }} marginTop={{ xs: 3, sm: 0 }}>
-            <Grid item direction="column" xs={6} sm={2} className="text-center">
+            <Grid item xs={6} sm={2} className="text-center">
               <IconButton
                 className="comment-btn"
+                aria-label="Pogledaj sljedeći komentar"
                 onClick={() =>
                   setActive(active < totalCount - 1 ? active + 1 : 0)
                 }
