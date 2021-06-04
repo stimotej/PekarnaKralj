@@ -61,9 +61,9 @@ const Gallery = ({
                   displayEmpty
                   onChange={handleCategorySelect}
                 >
-                  {categoryList.map(category => {
+                  {categoryList.map((index, category) => {
                     return (
-                      <MenuItem value={category.value}>
+                      <MenuItem value={category.value} key={index}>
                         {category.name}
                       </MenuItem>
                     )

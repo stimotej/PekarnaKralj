@@ -26,6 +26,15 @@
   text-decoration: underline !important;
 }
 
+@keyframes navbarAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .navbar-menu {
   position: fixed;
   top: 0;
@@ -34,7 +43,9 @@
   z-index: 999;
   text-align: center;
   background-color: #f48221;
-  transition: 0.5s;
+  animation-name: navbarAnimation;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
 }
 
 .show-navbar-menu {
@@ -202,6 +213,15 @@
   padding: 4rem 1.5rem 1rem 1.5rem !important;
 }
 
+@keyframes modalImageAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .modal-image {
   position: absolute !important;
   left: 50%;
@@ -209,6 +229,9 @@
   transform: translate(-50%, -50%);
   width: 90vw;
   max-height: 90vh;
+  animation-name: modalImageAnimation;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
 }
 
 .modal-image-img {

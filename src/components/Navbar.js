@@ -72,43 +72,41 @@ const NavbarComponent = () => {
         </Toolbar>
       </AppBar>
       {showNavbar && (
-        <Box component="div" overflow="hidden">
-          <Grid
-            container
-            className="navbar-menu"
-            direction="column"
-            justify="center"
-            alignContent="center"
+        <Grid
+          container
+          className="navbar-menu"
+          direction="column"
+          justify="center"
+          alignContent="center"
+        >
+          <Link to="/torte" className="nav-link" aria-label="Idi na torte">
+            Torte
+          </Link>
+          <Link to="/kolaci" className="nav-link" aria-label="Idi na kolače">
+            Kolači
+          </Link>
+          <Link
+            to="/pekarski-proizvodi"
+            className="nav-link"
+            aria-label="Idi na pekarske proizvode"
           >
-            <Link to="/torte" className="nav-link" aria-label="Idi na torte">
-              Torte
-            </Link>
-            <Link to="/kolaci" className="nav-link" aria-label="Idi na kolače">
-              Kolači
-            </Link>
-            <Link
-              to="/pekarski-proizvodi"
-              className="nav-link"
-              aria-label="Idi na pekarske proizvode"
-            >
-              Pekarski proizvodi
-            </Link>
-            <Link
-              to="/o-nama"
-              className="nav-link"
-              aria-label="Idi na stranicu o nama"
-            >
-              O nama
-            </Link>
-            <Link
-              to="/kontakt"
-              className="nav-link"
-              aria-label="Idi na kontakt stranicu"
-            >
-              Kontakt
-            </Link>
-          </Grid>
-        </Box>
+            Pekarski proizvodi
+          </Link>
+          <Link
+            to="/o-nama"
+            className="nav-link"
+            aria-label="Idi na stranicu o nama"
+          >
+            O nama
+          </Link>
+          <Link
+            to="/kontakt"
+            className="nav-link"
+            aria-label="Idi na kontakt stranicu"
+          >
+            Kontakt
+          </Link>
+        </Grid>
       )}
     </>
   )

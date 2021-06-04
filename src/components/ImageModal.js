@@ -3,25 +3,25 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import { FiX } from "react-icons/fi"
 
-const ImageModal = props => {
+const ImageModal = ({ imageState, handleClose }) => {
   return (
     <Modal
-      open={props.imageState}
-      onClose={props.handleClose}
+      open={imageState}
+      onClose={handleClose}
       closeAfterTransition
-      aria-labelledby="image-modal"
+      aria-labelledby="Image modal"
     >
       <>
         <GatsbyImage
           className="modal-image"
-          image={props.imageState}
+          image={imageState}
           imgStyle={{ borderRadius: "1rem" }}
           imgClassName="modal-image-img"
         />
         <IconButton
           className="modal-image-close-btn"
           aria-label="Zatvori pregled slike"
-          onClick={props.handleClose}
+          onClick={handleClose}
         >
           <FiX size={28} color="white" />
         </IconButton>
